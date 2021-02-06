@@ -1,0 +1,12 @@
+<body>
+  <nav><a routerLink="/profile"><img class="your-profile-icon" src={{yourProfile.picture}} ></a></nav>
+  <h1>Chat</h1>
+  <ul class="friends">
+    <li *ngFor="let friend of friends"
+      [class.selected]= "friend === selectedFriend"
+      (click)="onSelect(friend)">
+            <nav><a routerLink="/profile"><img class="profile-icon" src={{friend.picture}} ></a></nav>
+	    <span class="badge"> {{friend.name}}</span> {{friend.location}}
+    </li>
+  </ul>
+</body>
