@@ -1,6 +1,8 @@
 <body>
-  <img src='../assets/img/allan.jpg' >
-  <h1>{{yourName}}</h1>
+  <nav><a routerLink="/chat-list"><img class="chat-icon" src="../assets/img/chat-icon.jpg" ></a></nav>
+  <img class="profile_pic" src={{profileInfo.picture}} >
+  <h1>{{profileInfo.name}}</h1>
   <div>From {{profileInfo.location}}</div>
   <div>Born in {{profileInfo.birth_location}}</div>
+  <div>Works at {{profileInfo.work}}</div>
 </body>

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Profiles } from '../profiles';
+import { FRIENDS } from '../mock-friends-profiles';
+import { FriendsService } from '../friends.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,12 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  yourName = 'Allan Donis Guillen';
-  profileInfo = {
-     location: 'Rocklin, CA',
-     birth_location: 'Guatemala'
-  };
-  constructor() { }
+  profileInfo: Profiles;
+
+  constructor(private friendsService: FriendsService) { 
+    this.getProfile();
+  }
+
+  getProfile(): void {
+    this.profileInfo = this.friendsService.getProfile(0);
+  }
 
   ngOnInit(): void {
   }
