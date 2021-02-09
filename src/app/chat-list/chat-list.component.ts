@@ -20,8 +20,5 @@ export class ChatListComponent implements OnInit {
     this.friends = this.friendsService.getFriends();
     this.yourProfile = this.friendsService.getProfile(0);
   }
-  onSelect(): void {
-    this.friendsService.addProfile('him', 12, 'fk', 'loc', 'birth', 'work');
-  }
 
 }

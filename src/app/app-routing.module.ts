@@ -6,7 +6,8 @@ import { ChatListComponent } from './chat-list/chat-list.component';
 const routes: Routes = [
   {path: 'profile', component: ProfileComponent},
   {path: 'chat-list', component: ChatListComponent},
-  {path: '', redirectTo: '/profile', pathMatch: 'full' }
+  {path: '', redirectTo: '/profile', pathMatch: 'full'},
+  {path: 'profile/:id', component: ProfileComponent}
 ];
 
 @NgModule({
